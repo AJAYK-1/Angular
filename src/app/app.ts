@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Variables } from './components/variables/variables';
+import { Variables } from './practice/variables/variables';
 
 @Component({
   selector: 'app-root',
