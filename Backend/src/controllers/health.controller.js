@@ -5,15 +5,15 @@ class HealthController {
     this.healthService = healthService;
   }
 
-  healthCheck(req, res) {
+  healthCheck = (req, res) => {
     try {
       const result = this.healthService.checkHealth();
       return res.status(200).json(result);
     } catch (error) {
-      console.log("Error in HealthController.healthCheck(): ", error.message);
-      return res.status(500).json({ message: error.message });
+      console.error("Error in HealthController.healthCheck(): ", error.message);
+      return res.status(500).json({ message: "Internal Server Error" });
     }
-  }
+  };
 }
 
 const healthController = new HealthController(healthService);

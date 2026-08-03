@@ -1,7 +1,7 @@
 import express from "express";
 import { config } from "dotenv";
-import healthRouter from "./routes/health.routes";
 config();
+import healthRouter from "./routes/health.routes.js";
 
 const app = express();
 app.use(express.json());
