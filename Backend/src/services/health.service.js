@@ -1,4 +1,4 @@
-export class HealthService {
+class HealthService {
   checkHealth() {
     try {
       return { success: true, message: "Pulse App is running..." };
