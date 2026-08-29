@@ -9,7 +9,8 @@ authRouter.post("/signUp", asyncHandler(authController.signUp));
 authRouter.post("/signIn", asyncHandler(authController.signIn));
 authRouter.get(
   "/get-profile",
-  asyncHandler(Authenticate, authController.getProfile),
+  Authenticate,
+  asyncHandler(authController.getProfile),
 );
 
 export default authRouter;
